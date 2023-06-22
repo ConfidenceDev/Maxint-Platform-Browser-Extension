@@ -207,45 +207,75 @@ hr {
 
 .home .mid .dashboard_container {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: none;
+  flex-direction: column;
 }
 
-.home .mid .dashboard_container #line_chart {
-  margin-bottom: 50px;
-}
-
-.home .mid .dashboard_container .details {
+.home .mid .dash_top {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 0 10px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.home .mid .dashboard_container .details h5 {
-  margin-top: 10px;
+.home .mid .dash_top label {
+  font-size: 1rem;
+  align-self: center;
 }
 
-.home .mid .dashboard_container .details input,
-.home .mid .dashboard_container .details .year {
+.home .mid .dash_top select {
+  font-size: 1rem;
   padding: 8px;
   border-radius: 4px;
-  font-size: 1.1rem;
 }
 
-.home .mid .dashboard_container hr {
-  margin: 20px 0 0 0;
+.home .mid hr {
+  margin: 10px 0 0 0;
 }
 
-.home .mid .dashboard_container .menu {
+.home .mid #line_chart {
   width: 100%;
-  margin-top: 10px;
+  max-height: 200px;
+  margin-bottom: 10px;
+}
+
+.home .mid .dash_mid {
+  width: 100%;
+  height: 170px;
+  margin: 8px 0;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.home .mid .dash_mid .finance {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.home .mid .dash_mid table {
+  width: 100%;
+  overflow: scroll;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.home .mid .dash_mid table th,
+.home .mid .dash_mid table td {
+  color: black;
+}
+
+.home .mid .menu {
+  width: 100%;
+  margin: 8px 0;
   display: flex;
   justify-content: space-evenly;
 }
 
-.home .mid .dashboard_container .view_opt {
+.home .mid .view_opt {
   width: 100%;
   display: flex;
   flex-direction: column;
-  display: none;
 }

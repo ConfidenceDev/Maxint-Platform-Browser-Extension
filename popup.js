@@ -3,10 +3,8 @@ const dashboardContainer = document.querySelector(".dashboard_container");
 const emailField = document.querySelector(".email");
 const signInBtn = document.querySelector(".signin_btn");
 const ctx = document.querySelector("#line_chart");
-const growthField = document.querySelector(".growth");
 const yearOptions = document.querySelector(".year");
 const signOutBtn = document.querySelector(".signout");
-const viewOpt = document.querySelector(".view_opt");
 
 const demo_email = "admin@admin.com";
 const defaultColor = "white";
@@ -40,7 +38,7 @@ signInBtn.addEventListener("click", (e) => {
   }
 
   loadData(loadDefault);
-  viewOpt.style.display = "flex";
+  dashboardContainer.style.display = "flex";
   siginContainer.style.display = "none";
   chrome.runtime.sendMessage({ tag: "back", email: email });
   chrome.runtime.onMessage.addListener((obj, sender, response) => {
@@ -58,7 +56,6 @@ yearOptions.addEventListener("change", () => {
 signOutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   dashboardContainer.style.display = "none";
-  viewOpt.style.display = "none";
   siginContainer.style.display = "flex";
 });
 
