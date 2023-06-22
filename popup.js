@@ -8,7 +8,7 @@ const yearOptions = document.querySelector(".year");
 const signOutBtn = document.querySelector(".signout");
 const viewOpt = document.querySelector(".view_opt");
 
-const demo_email = "admin";
+const demo_email = "admin@admin.com";
 const defaultColor = "white";
 const gridColor = "rgb(255, 255, 255, 0.1)";
 

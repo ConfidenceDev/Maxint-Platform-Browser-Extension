@@ -12,6 +12,7 @@ Since it is not published yet, you have to run locally:
 - Clone repo or download zip (unzip file)
 - Launch web browser -> Settings -> Manage Extentions
 - Click on "Load Unpacked" -> find unziped folder and click open
+- Use email: <b> admin@admin.com <b> to login
 
 # TODO
 
