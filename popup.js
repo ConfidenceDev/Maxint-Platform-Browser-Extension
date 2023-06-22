@@ -6,6 +6,7 @@ const ctx = document.querySelector("#line_chart");
 const growthField = document.querySelector(".growth");
 const yearOptions = document.querySelector(".year");
 const signOutBtn = document.querySelector(".signout");
+const viewOpt = document.querySelector(".view_opt");
 
 const demo_email = "admin";
 const defaultColor = "white";
@@ -16,7 +17,7 @@ const loadDefault = {
   peroid: [2020, 2021, 2022, 2023],
 };
 
-loadData(loadDefault);
+//loadData(loadDefault);
 
 emailField.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
@@ -38,9 +39,9 @@ signInBtn.addEventListener("click", (e) => {
     return;
   }
 
-  dashboardContainer.style.display = "flex";
-  siginContainer.style.display = "none";
   loadData(loadDefault);
+  viewOpt.style.display = "flex";
+  siginContainer.style.display = "none";
   chrome.runtime.sendMessage({ tag: "back", email: email });
   chrome.runtime.onMessage.addListener((obj, sender, response) => {
     if (obj.tag === "front") {
@@ -50,13 +51,14 @@ signInBtn.addEventListener("click", (e) => {
   });
 });
 
-selectElement.addEventListener("change", () => {
-  const selectedValue = selectElement.value;
+yearOptions.addEventListener("change", () => {
+  const selectedValue = yearOptions.value;
 });
 
 signOutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   dashboardContainer.style.display = "none";
+  viewOpt.style.display = "none";
   siginContainer.style.display = "flex";
 });
 
