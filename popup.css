@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #7b72e2;
+  --secondary-color: #262938;
+  --secondary-light: #3e6981;
+  --secondary-hover: #385361;
+  --accent-color: #6b394c;
+  --grey: #616161;
+  --light-grey: #cecece;
+  --secondary-grey: #555555;
+  --dark-grey: #1b1b1b;
+  --box: rgba(0, 0, 0, 0.5);
+  --pale: #abc3cf;
+  --accent: #7a5261;
+}
+
+:root {
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-field: 1.4rem;
+  --mb-dir: 1.2rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1em;
+  color: var(--second-color);
+  line-height: 1.6;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: linear-gradient(
+    45deg,
+    var(--secondary-light),
+    var(--secondary-light)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--second-color);
+  font-size: 1.1em;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  width: 26px;
+  height: 26px;
+}
+
+img:hover {
+  transform: scale(1.02);
+  opacity: 0.5;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
+
+hr {
+  height: 1px;
+  margin: 10px 0;
+  opacity: 0.1;
+}
+
+.home {
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_cover {
+  min-width: 400px;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.home_cover .broad {
+  padding: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .top {
+  width: 100%;
+  height: 100px;
+  font-size: 1.1em;
+  color: white;
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 5px var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+}
+
+.home .top .top_brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home .top .brand {
+  width: 100px;
+  filter: invert(0%);
+  -webkit-filter: invert(0%);
+}
+
+.home .top .more {
+  background-color: var(--primary-color);
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.home .top .more:hover,
+.home .mid .sigin_container button:hover {
+  transform: scale(1.01);
+  background-color: var(--accent-color);
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
+
+.home .top .top_note {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home .mid {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+  margin: 2px 0;
+  font-size: 1.5em;
+  background-color: var(--secondary-color);
+  box-shadow: 0 3px 10px var(--dark-grey);
+  padding: 0;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.home .mid .sigin_container {
+  width: 100%;
+  height: 70%;
+  padding-bottom: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .mid .sigin_container input {
+  width: 70%;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 1.5rem;
+  color: black;
+  outline: none;
+  margin: 20px 0;
+}
+
+.home .mid .sigin_container button {
+  width: 70%;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  outline: none;
+  color: white;
+}
+
+.home .mid .dashboard_container {
+  width: 100%;
+  height: auto;
+}
+
+.home .mid .dashboard_container #line_chart {
+  margin-bottom: 50px;
+}
+
+.home .mid .dashboard_container .details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.home .mid .dashboard_container .details h5 {
+  margin-top: 10px;
+}
+
+.home .mid .dashboard_container .details input,
+.home .mid .dashboard_container .details .year {
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.home .mid .dashboard_container hr {
+  margin: 20px 0 0 0;
+}
+
+.home .mid .dashboard_container .menu {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Maxint is an easy and proven way to manage your money, providing a secure and ad-free place you need to maximize your interest."
+    />
+    <meta name="keywords" content="interest, trade, savings, trend" />
+    <meta name="author" content="ConfidenceDev" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+    <script defer src="popup.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js"
+      integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Maxint | Interest</title>
+  </head>
+  <body class="home">
+    <div class="home_cover">
+      <div class="broad top">
+        <div class="top_brand">
+          <img src="./icons/maxint.svg" alt="maxint" class="brand" />
+          <a href="https://www.maxint.com/" target="_blank" class="more"
+            >More</a
+          >
+        </div>
+        <hr />
+        <div class="top_note">
+          <marquee
+            class="note"
+            behavior="60%"
+            direction="left"
+            scrollamount="5"
+          >
+            Protect your purchasing power | Move your money into a high-yield
+            account | Maximize your interest, at any time, with any bank.
+          </marquee>
+        </div>
+      </div>
+      <div class="broad mid chart">
+        <div class="dashboard_container">
+          <canvas hidden id="line_chart"></canvas>
+          <div class="details">
+            <h5>Growth</h5>
+            <input type="number" name="money" class="growth" placeholder="0" />
+          </div>
+          <div class="details">
+            <h5>Period</h5>
+            <select name="year" class="year">
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023" selected>2023</option>
+            </select>
+          </div>
+          <hr />
+          <div class="menu">
+            <img src="./icons/refresh.png" alt="refresh" class="refresh" />
+            <img src="./icons/inflation.png" alt="refresh" class="inflation" />
+            <img src="./icons/profit.png" alt="refresh" class="profit" />
+            <img src="./icons/signout.png" alt="refresh" class="signout" />
+          </div>
+        </div>
+        <div class="sigin_container">
+          <h2>Manage Account</h2>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            class="email"
+          />
+          <button class="signin_btn">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

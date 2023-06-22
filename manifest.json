@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Maxint",
+  "version": "0.0.1",
+  "description": "Maxint is an easy and proven way to manage your money, providing a secure and ad-free place you need to maximize your interest.",
+  "icons": {
+    "32": "icons/maxint-32.png",
+    "64": "icons/maxint-64.png",
+    "128": "icons/maxint-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "32": "icons/maxint-32.png",
+      "64": "icons/maxint-64.png",
+      "128": "icons/maxint-128.png"
+    },
+    "default_title": "Maxint",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
